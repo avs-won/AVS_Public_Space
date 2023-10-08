@@ -22,7 +22,14 @@ def anti_clock_rotated(a):
       result[m-j-1][i] = a[i][j]
   return result
 
-arr=[[' ']* 80 for k in range(42)]  
+atr=[]
+for i in range(42):
+    degree=i*9     
+    atr.append(int(math.sin(math.radians(degree))*40+40))
+    
+
+
+arr=[[' ']* max(atr) for k in range(42)]  
         
 for k in range(42):
     degree=k*9
